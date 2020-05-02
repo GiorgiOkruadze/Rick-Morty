@@ -1,0 +1,16 @@
+.navbar-expand-lg {
+    width:94%!important;
+    margin:auto;
+}
+
+.navbar-brand img {
+    width:60px;
+}
+
+.nav-item {
+    margin:0px 22px;
+}
+
+.nav-item .nav-link {
+    font-size: 22px;
+}

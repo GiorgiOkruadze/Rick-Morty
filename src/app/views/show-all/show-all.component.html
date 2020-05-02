@@ -1,0 +1,12 @@
+<main>
+    <app-slider *ngIf="sliderRenderData.length > 2" [sliderRenderData]="sliderRenderData"></app-slider>
+    <section class="characters-area">
+        <h1>All Rick And Morty Characters</h1>
+        <article class="cards-area">
+            <app-card
+                *ngFor="let item of serverDatas"
+                [item]="item"
+            ></app-card>
+        </article>
+    </section>
+</main>

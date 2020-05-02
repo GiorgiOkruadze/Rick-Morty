@@ -1,0 +1,12 @@
+<article class="filters">
+    <div class="form-group">
+        <input (input)="onSearchCharacterPress($event)"  type="text" class="form-control" placeholder="Enter character name">
+    </div>
+    <div class="form-group">
+        <select class="form-control" (change)="onGenderFilterChange($event)">
+            <option value="all">All</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+    </div>
+</article>

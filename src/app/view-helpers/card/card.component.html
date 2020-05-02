@@ -1,0 +1,27 @@
+<div class="card" style="width: 18rem;">
+    <img [src]="item.image" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 
+        class="card-title">{{item.name}}</h5>
+        <p 
+        appFont='black' 
+        setColor='steelblue' 
+        class="card-text">{{item.location.name}}.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{item.species}}</li>
+        <li class="list-group-item">{{item.gender}}</li>
+        <li class="list-group-item">{{item.status}}</li>
+    </ul>
+    <div class="card-body">
+        <a routerLink="/show-all" 
+        [queryParams]="{
+            name:item.name,
+            location:item.location.name,
+            status:item.status,
+            gender:item.gender,
+            species:item.species
+        }" 
+        class="card-link btn btn-dark btn-lg btn-block">Show All Alters</a>
+    </div>
+</div>

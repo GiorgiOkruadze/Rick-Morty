@@ -1,0 +1,18 @@
+.characters-area {
+    width:80%;
+    margin:auto;
+}
+
+.characters-area h1 {
+    margin:100px 0px 40px 0px;
+}
+
+.characters-area article {
+    display: flex;
+    justify-content: space-between;;
+    flex-wrap: wrap;
+}
+
+.fitler-area {
+    margin-bottom: 50px;
+}

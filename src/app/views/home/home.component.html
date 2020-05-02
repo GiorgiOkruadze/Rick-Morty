@@ -1,0 +1,18 @@
+<main>
+    <app-slider [sliderRenderData]="sliderRenderData"></app-slider>
+    <section class="characters-area">
+        <h1>All Rick And Morty Characters</h1>
+        <article class="fitler-area">
+            <app-filter 
+            [ngStyle]="{'width':'100%'}"
+            (onFilterStateChange)="onFilterStateChange($event)"
+            ></app-filter>
+        </article>
+        <article class="cards-area">
+            <app-card
+                *ngFor="let item of serverRenderData"
+                [item]="item"
+            ></app-card>
+        </article>
+    </section>
+</main>
