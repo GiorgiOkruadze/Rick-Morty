@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,7 @@ import { CardComponent } from './view-helpers/card/card.component';
 import { WebClientService } from 'src/shared-services/proxy-services/web-client.service';
 import { FilterComponent } from './view-helpers/filter/filter.component';
 import { FontDirective } from './directives/font.directive';
+import { LoadingInterceptorService } from  './../shared-services/Interseprot/loading-interceptor.service'
 
 @NgModule({
   declarations: [
@@ -32,6 +33,11 @@ import { FontDirective } from './directives/font.directive';
     HttpClientModule
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptorService,
+      multi: true
+    },
     WebClientService
   ],
   bootstrap: [AppComponent]
